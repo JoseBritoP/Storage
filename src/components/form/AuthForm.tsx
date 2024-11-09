@@ -84,7 +84,7 @@ export default function AuthForm({ type }: {type:FormType}) {
           </Button>
           {errorMessage && <p className="error-message">{errorMessage}</p>}
           <div className="body-2 flex justify-center">
-            <p className="text-light-100">
+            <p className="text-light-100 dark:text-gray-300">
               {type === "sign-in"
                 ? "Don't have an Account?"
                 : "Already have an Account?"}

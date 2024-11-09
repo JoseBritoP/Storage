@@ -1,3 +1,4 @@
+import AuthNav from "@/components/shared/AuthNav";
 import Image from "next/image";
 import React from "react";
 
@@ -32,8 +33,9 @@ export default function AuthLayout({
           />
         </div>
       </section>
-      <section className="flex flex-1 flex-col items-center bg-gray-100 p-4 py-10 lg:justify-center lg:p-10 lg:py-0">
-        <div className="mb-16 lg:hidden">
+      <section className="flex flex-1 flex-col items-center bg-gray-100 dark:bg-dark-200 p-4 py-10 lg:justify-center lg:p-10 lg:py-0">
+        <AuthNav/>
+        <div className="flex flex-col mb-16 lg:hidden w-full items-center justify-center">
           <Image
             alt="logo"
             src="/assets/icons/logo-full-brand.svg"
