@@ -22,7 +22,7 @@ export function DarkModeSwitch() {
   };
 
   return (
-    <div className="flex justify-center items-center space-x-2 p-2">
+    <div className="flex justify-center items-center space-x-2 p-2 border rounded-full shadow-lg dark:shadow-gray-800 dark:shadow-md">
       <Sun size={15} className="opacity-100 dark:opacity-35" />
       <Switch checked={checked} onCheckedChange={handleToggle} />
       <MoonStar size={15} className="opacity-35 dark:opacity-100" />
