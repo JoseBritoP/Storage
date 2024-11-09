@@ -3,7 +3,7 @@ import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { FormType } from "@/components/form/AuthForm";
+import { FormType } from "@/components/Auth/form/AuthForm";
 import { createAccount } from "@/lib/actions/user.actions";
 import { toast } from "react-toastify";
 
