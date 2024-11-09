@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { FormType } from "@/components/Auth/form/AuthForm";
-import { createAccount } from "@/lib/actions/user.actions";
+import { createAccount, signInUser } from "@/lib/actions/user.actions";
 import { toast } from "react-toastify";
 
 const fullName = z.string().min(2).max(50);
@@ -34,15 +34,18 @@ export default function useAuthForm(type: FormType) {
     console.log(values);
     setIsLoading(true)
     try {
-      const user = await createAccount({
+      const user = type === 'sign-up' ? 
+      await createAccount({
         fullName:values.fullName || "",
         email:values.email
-      });
+      })
+      : await signInUser({email:values.email});  
       setAccountId(user.accountId)
       toast.success(`Check your email!`)
     } catch (error:unknown) {
       console.log(error)
-      toast.error('Failed to create account. Please try again')
+      const message = type === 'sign-up' ? 'Failed to create account. Please try again' : 'Failed to logged. Please Try again'
+      toast.error(message)
     } finally {
       setIsLoading(false)
     }
