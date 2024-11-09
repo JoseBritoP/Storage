@@ -41,7 +41,7 @@ export default function useAuthForm(type: FormType) {
       })
       : await signInUser({email:values.email});  
       setAccountId(user.accountId)
-      toast.success(`Check your email!`)
+      toast.info(`Check your email to confinue!`)
     } catch (error:unknown) {
       console.log(error)
       const message = type === 'sign-up' ? 'Failed to create account. Please try again' : 'Failed to logged. Please Try again'
