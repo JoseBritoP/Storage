@@ -22,7 +22,7 @@ export default async function RootLayout({
         fullName={currentUser.fullName}
       />
       <section className="flex h-full flex-1 flex-col">
-        <MobileNav />
+        <MobileNav {...currentUser} />
         <Header />
         <div className="main-content">{children}</div>
       </section>
