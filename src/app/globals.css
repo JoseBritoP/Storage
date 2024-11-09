@@ -342,7 +342,7 @@
 
   /* FileUploader */
   .uploader-button {
-    @apply primary-btn h-[52px] gap-2 px-10 shadow-drop-1 !important;
+    @apply primary-btn h-[52px] gap-2 px-10 shadow-drop-1 dark:text-light-300 w-full transition-colors duration-200 ease-in !important;
   }
   .uploader-preview-list {
     @apply fixed bottom-10 right-10 z-50 flex size-full h-fit max-w-[480px] flex-col gap-3 rounded-[20px] bg-white p-7 shadow-drop-3 !important;
@@ -389,7 +389,7 @@
     @apply flex text-light-100 dark:text-gray-100 gap-4 w-full justify-start items-center h5 px-6 h-[52px] rounded-full !important;
   }
   .mobile-sign-out-button {
-    @apply h5 flex h-[52px] w-full items-center gap-4 rounded-full bg-brand/10 px-6 text-brand shadow-none transition-all hover:bg-brand/20 dark:bg-brand/30  !important;
+    @apply h5 flex h-[52px] w-full items-center gap-4 rounded-full bg-brand/20 px-6 text-brand-100 shadow-none transition-all duration-200 ease-out hover:bg-brand/30 dark:bg-brand/30  !important;
   }
 
   /* OTP Modal */
