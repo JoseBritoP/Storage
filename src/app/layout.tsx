@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
+import ToastNotification from "@/components/ui/ToastifyNotification";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -29,6 +30,7 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
+        <ToastNotification/>
       </body>
     </html>
   );
