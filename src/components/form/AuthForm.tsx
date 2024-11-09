@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -12,14 +12,14 @@ import { Input } from "@/components/ui/input";
 import Image from "next/image";
 import Link from "next/link";
 import useAuthForm from "@/hooks/useAuthForm";
+import { OTPModal } from "../shared/OTPModal";
 
-export type FormType = 'sign-in' | 'sign-up'
+export type FormType = "sign-in" | "sign-up";
 
-export default function AuthForm({ type }: {type:FormType}) {
-
+export default function AuthForm({ type }: { type: FormType }) {
   const labelValue = type === "sign-in" ? "Sign In" : "Sign Up";
 
-  const { isLoading, errorMessage, form, onSubmit } = useAuthForm(type)
+  const { isLoading, form, onSubmit,accountId } = useAuthForm(type);
   return (
     <>
       <Form {...form}>
@@ -82,7 +82,6 @@ export default function AuthForm({ type }: {type:FormType}) {
               />
             )}
           </Button>
-          {errorMessage && <p className="error-message">{errorMessage}</p>}
           <div className="body-2 flex justify-center">
             <p className="text-light-100 dark:text-gray-300">
               {type === "sign-in"
@@ -93,12 +92,15 @@ export default function AuthForm({ type }: {type:FormType}) {
               href={type === "sign-in" ? "/sign-up" : "/sign-in"}
               className="ml-1 font-medium text-brand"
             >
-              {type === 'sign-in' ? 'Sign Up' : 'Sign In'}
+              {type === "sign-in" ? "Sign Up" : "Sign In"}
             </Link>
           </div>
         </form>
       </Form>
       {/* OTP Verification */}
+      {accountId &&
+      <OTPModal email={form.getValues("email")} accountId={accountId} />
+    }
     </>
   );
 }

@@ -9,7 +9,7 @@ export default function AuthLayout({
 }) {
   return (
     <div className="flex min-h-screen">
-      <section className="bg-brand hidden w-1/2 items-center justify-center lg:flex xl:w-2/5">
+      <section className="bg-brand dark:bg-brand-100 hidden w-1/2 items-center justify-center lg:flex xl:w-2/5">
         <div className="flex max-h-[80ppx] max-w-[430px] flex-col justify-center space-y-12">
           <Image
             alt="logo"
