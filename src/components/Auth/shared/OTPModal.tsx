@@ -46,7 +46,7 @@ export function OTPModal({
       const sessionId = await verifySecret({ accountId, password });
       if (!sessionId) throw new Error("Error getting sessionId ");
       router.push("/");
-      const message = type === 'sign-in' ? 'Welcome back' : ''
+      const message = type === 'sign-in' ? 'Welcome back' : 'Welcome to StoreIt!'
       toast.success(message);
     } catch (error) {
       console.log("Failed to verify OTP", error);
