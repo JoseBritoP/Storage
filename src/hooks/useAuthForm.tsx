@@ -38,9 +38,8 @@ export default function useAuthForm(type: FormType) {
         fullName:values.fullName || "",
         email:values.email
       });
-      const success = type === 'sign-in' ? 'Logged successfully!' : 'Account was create successfully!'
       setAccountId(user.accountId)
-      toast.success(`${success}`)
+      toast.success(`Check your email!`)
     } catch (error:unknown) {
       console.log(error)
       toast.error('Failed to create account. Please try again')
