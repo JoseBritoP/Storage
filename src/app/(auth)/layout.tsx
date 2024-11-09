@@ -1,4 +1,4 @@
-import AuthNav from "@/components/shared/AuthNav";
+import AuthNav from "@/components/Auth/shared/AuthNav";
 import Image from "next/image";
 import React from "react";
 
