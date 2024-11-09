@@ -23,7 +23,7 @@ export default async function RootLayout({
       />
       <section className="flex h-full flex-1 flex-col">
         <MobileNav {...currentUser} />
-        <Header />
+        <Header {...currentUser} />
         <div className="main-content">{children}</div>
       </section>
     </main>
