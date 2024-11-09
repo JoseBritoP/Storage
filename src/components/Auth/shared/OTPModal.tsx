@@ -6,7 +6,6 @@ import {
   AlertDialogContent,
   AlertDialogDescription,
   AlertDialogFooter,
-  AlertDialogTrigger,
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
@@ -21,15 +20,18 @@ import { sendEmailOTP, verifySecret } from "@/lib/actions/user.actions";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import { Button } from "@/components/ui/button";
+import { FormType } from "../form/AuthForm";
 
 interface OTPModalProps {
   email: string;
   accountId: string;
+  type: FormType
 }
 
 export function OTPModal({
   email = "test@gmail.com",
   accountId,
+  type
 }: OTPModalProps) {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(true);
@@ -44,7 +46,8 @@ export function OTPModal({
       const sessionId = await verifySecret({ accountId, password });
       if (!sessionId) throw new Error("Error getting sessionId ");
       router.push("/");
-      toast.success("Successfully Sign In!");
+      const message = type === 'sign-in' ? 'Welcome back' : ''
+      toast.success(message);
     } catch (error) {
       console.log("Failed to verify OTP", error);
       toast.error("Failed to verify OTP");
