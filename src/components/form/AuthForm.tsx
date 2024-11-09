@@ -19,7 +19,7 @@ export type FormType = "sign-in" | "sign-up";
 export default function AuthForm({ type }: { type: FormType }) {
   const labelValue = type === "sign-in" ? "Sign In" : "Sign Up";
 
-  const { isLoading, form, onSubmit,accountId } = useAuthForm(type);
+  const { isLoading, form, onSubmit, accountId } = useAuthForm(type);
   return (
     <>
       <Form {...form}>
@@ -98,9 +98,9 @@ export default function AuthForm({ type }: { type: FormType }) {
         </form>
       </Form>
       {/* OTP Verification */}
-      {accountId &&
-      <OTPModal email={form.getValues("email")} accountId={accountId} />
-    }
+      {accountId && (
+        <OTPModal email={form.getValues("email")} accountId={accountId} />
+      )}
     </>
   );
 }
