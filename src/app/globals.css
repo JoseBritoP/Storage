@@ -123,7 +123,7 @@
     @apply text-[14px] leading-[20px] font-medium;
   }
   .caption {
-    @apply text-[12px] leading-[16px] font-normal;
+    @apply text-[12px] leading-[16px] font-normal dark:text-gray-400;
   }
   .overline {
     @apply text-[10px] leading-[14px] font-normal;
@@ -389,7 +389,7 @@
     @apply flex text-light-100 dark:text-gray-100 gap-4 w-full justify-start items-center h5 px-6 h-[52px] rounded-full !important;
   }
   .mobile-sign-out-button {
-    @apply h5 flex h-[52px] w-full items-center gap-4 rounded-full bg-brand/10 px-6 text-brand shadow-none transition-all hover:bg-brand/20 !important;
+    @apply h5 flex h-[52px] w-full items-center gap-4 rounded-full bg-brand/10 px-6 text-brand shadow-none transition-all hover:bg-brand/20 dark:bg-brand/30  !important;
   }
 
   /* OTP Modal */
