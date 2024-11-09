@@ -98,7 +98,7 @@ const MobileNav = ({
 
             <div className="mb-4 border-b border-light-200/20 pt-4" />
             <DarkModeButton/>
-            <div className="flex flex-col justify-between gap-5 pb-5">
+            <div className="flex flex-col justify-between gap-5 pb-5 pt-6">
               <FileUplodeader ownerId={ownerId} accountId={accountId} />
               <Button
                 type="submit"
