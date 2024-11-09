@@ -1,6 +1,11 @@
 import React from 'react'
 
-export default function FileUplodeader() {
+interface FileUplodeaderProps {
+  ownerId:string
+  accountId:string
+}
+
+export default function FileUplodeader({}:FileUplodeaderProps) {
   return (
     <div>
       
