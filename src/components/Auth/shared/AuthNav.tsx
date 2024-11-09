@@ -1,5 +1,5 @@
+import { DarkModeSwitch } from "@/components/ui/DarkModeSwitch";
 import React from "react";
-import { DarkModeSwitch } from "../ui/DarkModeSwitch";
 
 export default function AuthNav() {
   return (

@@ -17,10 +17,10 @@ import {
 } from "@/components/ui/input-otp";
 import { useState } from "react";
 import Image from "next/image";
-import { Button } from "../ui/button";
 import { sendEmailOTP, verifySecret } from "@/lib/actions/user.actions";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
+import { Button } from "@/components/ui/button";
 
 interface OTPModalProps {
   email: string;
