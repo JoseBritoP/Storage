@@ -23,7 +23,7 @@ const Sidebar = ({ fullName, avatar, email }: Props) => {
           alt="logo"
           width={160}
           height={50}
-          className="hidden h-auto w-auto lg:block"
+          className="hidden h-auto w-auto max-w-[180px] lg:block"
         />
 
         <Image
@@ -41,7 +41,7 @@ const Sidebar = ({ fullName, avatar, email }: Props) => {
             <Link key={name} href={url} className="lg:w-full">
               <li
                 className={cn(
-                  "sidebar-nav-item hover:bg-gray-100 dark:hover:bg-dark-200",
+                  "sidebar-nav-item transition-colors duration-200 ease-linear hover:bg-gray-200/60 dark:hover:bg-dark-200",
                   pathname === url && "shad-active",
                 )}
               >
