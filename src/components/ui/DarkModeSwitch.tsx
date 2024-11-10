@@ -8,24 +8,28 @@ export function DarkModeSwitch() {
   const { theme, setTheme } = useTheme();
   const [checked, setChecked] = useState(false);
 
-  // Sincronizar el estado local del switch con el tema actual
+  const size = 20
+
   useEffect(() => {
     setChecked(theme === "dark");
   }, [theme]);
 
-  // Cambiar el tema con un pequeño retraso para permitir que se complete la animación
   const handleToggle = (newCheckedState: boolean) => {
     setChecked(newCheckedState);
     setTimeout(() => {
       setTheme(newCheckedState ? "dark" : "light");
-    }, 100); // Ajusta el tiempo si es necesario
+    }, 100); 
   };
 
   return (
-    <div className="flex justify-center items-center space-x-2 p-2 border rounded-full shadow-lg dark:shadow-gray-800 dark:shadow-md">
-      <Sun size={15} className="opacity-100 dark:opacity-35" />
-      <Switch checked={checked} onCheckedChange={handleToggle} />
-      <MoonStar size={15} className="opacity-35 dark:opacity-100" />
+    <div className="flex justify-center items-center space-x-2 py-4 px-6 border rounded-full shadow-lg dark:shadow-gray-800 dark:shadow-md w-2/4">
+      <Sun size={size} className="opacity-100 dark:opacity-35 cursor-pointer" onClick={()=>setTheme('light')} />
+      <Switch
+        checked={checked}
+        onCheckedChange={handleToggle}
+        className="p-2"
+      />
+      <MoonStar size={size} className="opacity-35 dark:opacity-100 cursor-pointer" onClick={()=>setTheme('dark')} />
     </div>
   );
 }
