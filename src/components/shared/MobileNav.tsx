@@ -15,7 +15,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { signOutUser } from "@/lib/actions/user.actions";
-import FileUplodeader from "./Header/FileUplodeader";
+import FileUplodeader from "./Header/FileUploder";
 import DarkModeButton from "../ui/DarkModeButton";
 
 interface Props {
