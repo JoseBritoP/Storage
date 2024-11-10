@@ -3,13 +3,8 @@ import React from "react";
 
 export default function AuthNav() {
   return (
-    <>
-      <div className="flex justify-end items-center w-full lg:hidden">
+      <div className="flex justify-end items-center w-1/3">
         <DarkModeSwitch />
       </div>
-      <div className="hidden lg:flex justify-end items-center w-full">
-        <DarkModeSwitch />
-      </div>
-    </>
   );
 }
