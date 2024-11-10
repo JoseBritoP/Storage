@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { signOutUser } from "@/lib/actions/user.actions";
 import Search from "./Header/Search";
-import FileUplodeader from "./Header/FileUplodeader";
+import FileUplodeader from "./Header/FileUploder";
 
 const Header = ({
   userId,
