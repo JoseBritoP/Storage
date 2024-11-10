@@ -23,7 +23,7 @@ const FileUploader = ({ ownerId, accountId, className }: FileUploaderProps) => {
   return (
     <div {...getRootProps()} className="cursor-pointer w-full">
       <input {...getInputProps()} />
-      <Button type="button" className={cn("uploader-button", className)}>
+      <Button type="button" className={cn("uploader-button", className)} aria-label="Upload button">
         <Image
           src="/assets/icons/upload.svg"
           alt="upload"
@@ -61,7 +61,7 @@ const FileUploader = ({ ownerId, accountId, className }: FileUploaderProps) => {
                     />
                   </div>
                 </div>
-                <button onClick={(e) => handleRemoveFile(e, file.name)}>
+                <button onClick={(e) => handleRemoveFile(e, file.name)} aria-label="Remove file button">
                   <CircleXIcon size={24} />
                 </button>
               </li>

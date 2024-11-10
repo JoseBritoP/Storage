@@ -12,6 +12,7 @@ export default function DarkModeButton() {
       <Button
         onClick={() => setTheme("light")}
         className={`${theme === "light" ? "border bg-brand-100 hover:bg-rose-500 " : "bg-gray-100 text-light-100 dark:bg-dark-200 dark:text-light-300 rounded-lg hover:bg-gray-300/50 dark:hover:bg-gray-800"} transition-colors duration-150 ease-in-out rounded-full shadow-md dark:shadow-gray-800 px-10 py-6 w-full `}
+        aria-label="Change for light theme"
       >
         <SunIcon />
         <p>Light Mode</p>
@@ -19,6 +20,7 @@ export default function DarkModeButton() {
       <Button
         onClick={() => setTheme("dark")}
         className={`${theme === "dark" ? "border bg-brand/80 hover:bg-rose-500/75 text-light-300 " : "bg-gray-100 text-light-100 dark:bg-dark-200 dark:text-light-300 rounded-lg hover:bg-gray-300/50 dark:hover:bg-gray-800"} transition-colors duration-150 ease-in-out rounded-full shadow-md dark:shadow-gray-800 px-10 py-6 w-full `}
+        aria-label="Change for dark theme"
       >
         <p>Dark Mode</p>
         <MoonIcon />

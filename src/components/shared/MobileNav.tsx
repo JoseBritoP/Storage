@@ -104,6 +104,7 @@ const MobileNav = ({
                 type="submit"
                 className="mobile-sign-out-button"
                 onClick={async () => await signOutUser()}
+                aria-label="Logout mobile button"
               >
                 <Image
                   src="/assets/icons/logout.svg"

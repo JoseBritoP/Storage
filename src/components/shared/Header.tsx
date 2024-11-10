@@ -24,7 +24,7 @@ const Header = ({
             await signOutUser();
           }}
         >
-          <Button type="submit" className="sign-out-button">
+          <Button type="submit" className="sign-out-button" aria-label="Logout button">
             <Image
               src="/assets/icons/logout.svg"
               alt="logo"

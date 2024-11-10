@@ -116,10 +116,10 @@ const ActionDropdown = ({ file }: { file: Models.Document }) => {
         </DialogHeader>
         {["rename", "delete", "share"].includes(value) && (
           <DialogFooter className="flex flex-col gap-3 md:flex-row">
-            <Button onClick={closeAllModals} className="modal-cancel-button">
+            <Button onClick={closeAllModals} className="modal-cancel-button" aria-label="Close all modals button">
               Cancel
             </Button>
-            <Button onClick={handleAction} className="modal-submit-button">
+            <Button onClick={handleAction} className="modal-submit-button" aria-label="Submit modal">
               <p className="capitalize">{value}</p>
               {isLoading && (
                 <Image

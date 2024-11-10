@@ -77,6 +77,7 @@ export const ShareInput = ({ file, onInputChange, onRemove }: Props) => {
                 <Button
                   onClick={() => onRemove(email)}
                   className="share-remove-user"
+                  aria-label="remove button"
                 >
                   <Image
                     src="/assets/icons/remove.svg"

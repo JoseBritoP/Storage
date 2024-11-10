@@ -70,6 +70,7 @@ export default function AuthForm({ type }: { type: FormType }) {
             className="form-submit-button"
             type="submit"
             disabled={isLoading}
+            aria-label="Submit form"
           >
             {labelValue}
             {isLoading && (

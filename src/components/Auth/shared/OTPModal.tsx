@@ -75,6 +75,7 @@ export function OTPModal({
                 width={20}
                 onClick={() => setIsOpen(false)}
                 className="otp-close-button"
+                aria-label="Close modal"
               />
             </button>
           </AlertDialogTitle>
@@ -120,6 +121,7 @@ export function OTPModal({
                 variant="link"
                 className="pl-1 text-brand"
                 onClick={handleResendOtp}
+                aria-label="Resend otp button"
               >
                 Click to resend
               </Button>
