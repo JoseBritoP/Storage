@@ -181,7 +181,7 @@
     @apply cursor-pointer !important;
   }
   .shad-dialog {
-    @apply rounded-[26px] w-[90%] max-w-[400px] px-6 py-8   !important;
+    @apply rounded-[26px] w-[90%] max-w-[400px] px-6 py-8 dark:bg-gray-950   !important;
   }
   .shad-chart-title {
     @apply text-white !important;
@@ -273,13 +273,13 @@
 
   /* ActionsModalContent */
   .file-details-thumbnail {
-    @apply !mb-1 flex items-center gap-3 rounded-xl border border-light-200/40 bg-light-400/50 p-3 !important;
+    @apply !mb-1 flex items-center gap-3 rounded-xl border border-light-200/40 dark:border-light-100/60 bg-light-400/50 dark:bg-light-100/30 p-3 !important;
   }
   .file-details-label {
-    @apply body-2 w-[30%] text-light-100 !important;
+    @apply body-2 w-[30%] text-light-100 dark:text-light-300 !important;
   }
   .file-details-value {
-    @apply subtitle-2 flex-1 !important;
+    @apply subtitle-2 flex-1 dark:text-light-300/80 !important;
   }
 
   .share-wrapper {
@@ -311,7 +311,7 @@
 
   /* Card */
   .file-card {
-    @apply flex cursor-pointer flex-col gap-6 rounded-[18px] bg-white dark:bg-gray-950 p-5 shadow-sm transition-all hover:shadow-drop-3 !important;
+    @apply flex cursor-pointer flex-col gap-6 rounded-[18px] bg-white dark:bg-gray-950 p-5 shadow-sm transition-all duration-100 hover:shadow-drop-3 !important;
   }
   .file-card-details {
     @apply flex flex-col gap-2 text-light-100 !important;
