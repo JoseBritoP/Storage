@@ -22,7 +22,7 @@ export function DarkModeSwitch() {
   };
 
   return (
-    <div className="flex justify-center items-center space-x-2 py-4 px-6 border rounded-full shadow-lg dark:shadow-gray-800 dark:shadow-md w-2/4">
+    <div className="flex justify-center items-center space-x-2 py-4 px-6 border rounded-full shadow-lg dark:shadow-gray-800 dark:shadow-md w-2/4 dark:hover:bg-dark-200/50 transition-colors duration-150 ease-out">
       <Sun size={size} className="opacity-100 dark:opacity-35 cursor-pointer" onClick={()=>setTheme('light')} />
       <Switch
         checked={checked}
