@@ -5,6 +5,7 @@ import Image from "next/image";
 import { avatarPlaceholderUrl, navItems } from "@/constants";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { DarkModeSwitch } from "../ui/DarkModeSwitch";
 
 interface Props {
   fullName: string;
@@ -14,7 +15,6 @@ interface Props {
 
 const Sidebar = ({ fullName, avatar, email }: Props) => {
   const pathname = usePathname();
-
   return (
     <aside className="sidebar">
       <Link href="/">
@@ -42,7 +42,7 @@ const Sidebar = ({ fullName, avatar, email }: Props) => {
               <li
                 className={cn(
                   "sidebar-nav-item transition-colors duration-200 ease-linear hover:bg-gray-200/60 dark:hover:bg-dark-200",
-                  pathname === url && "shad-active",
+                  pathname === url && "shad-active"
                 )}
               >
                 {/* <Image
@@ -60,6 +60,7 @@ const Sidebar = ({ fullName, avatar, email }: Props) => {
               </li>
             </Link>
           ))}
+          <DarkModeSwitch/>
         </ul>
       </nav>
       <Image
