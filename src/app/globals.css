@@ -99,13 +99,13 @@
     @apply text-[24px] leading-[36px] font-bold dark:text-gray-200;
   }
   .h3 {
-    @apply text-[20px] leading-[28px] font-semibold dark:text-gray-300;
+    @apply text-[20px] leading-[28px] font-semibold dark:text-gray-50;
   }
   .h4 {
     @apply text-[18px] leading-[20px] font-medium dark:text-gray-400;
   }
   .h5 {
-    @apply text-[16px] leading-[24px] font-semibold dark:text-gray-500;
+    @apply text-[16px] leading-[24px] font-semibold dark:text-gray-200;
   }
   .subtitle-1 {
     @apply text-[16px] leading-[24px] font-medium dark:text-gray-200;
@@ -213,10 +213,10 @@
     @apply mt-6 grid grid-cols-1 gap-4 xl:mt-10 xl:grid-cols-2 xl:gap-9 !important;
   }
   .dashboard-summary-card {
-    @apply relative mt-6 rounded-[20px] bg-white p-5 transition-all hover:scale-105 !important;
+    @apply relative mt-6 rounded-[20px] bg-white dark:bg-dark-100 p-5 transition-all hover:scale-105 !important;
   }
   .summary-type-icon {
-    @apply absolute -left-3 top-[-25px] z-10 w-[190px] object-contain !important;
+    @apply absolute -left-3 top-[-25px] z-10 w-[190px] object-contain dark:bg-dark-200 !important;
   }
   .summary-type-size {
     @apply h4 relative z-20 w-full text-right !important;
@@ -225,13 +225,14 @@
     @apply h5 relative z-20 text-center !important;
   }
   .dashboard-recent-files {
-    @apply h-full rounded-[20px] bg-white p-5 xl:p-8 !important;
+    @apply h-full rounded-[20px] bg-white dark:bg-dark-100/80 p-5 xl:p-8 !important;
   }
   .recent-file-details {
-    @apply flex w-full flex-col xl:flex-row xl:justify-between !important;
+    /* @apply flex w-full flex-col xl:flex-row xl:justify-between !important; */
+    @apply flex w-full justify-between items-center !important;
   }
   .recent-file-name {
-    @apply subtitle-2 line-clamp-1 w-full text-light-100 sm:max-w-[200px] lg:max-w-[250px] !important;
+    @apply subtitle-2 line-clamp-1 w-full text-light-100 dark:text-light-300/80 sm:max-w-[200px] lg:max-w-[250px] !important;
   }
   .recent-file-date {
     @apply body-2 text-light-100/80 !important;
@@ -319,7 +320,7 @@
 
   /* Chart */
   .chart {
-    @apply flex items-center rounded-[20px] bg-brand p-5 text-white md:flex-col xl:flex-row !important;
+    @apply flex items-center rounded-[20px] bg-brand dark:bg-brand-100 p-5 text-white md:flex-col xl:flex-row !important;
   }
   .chart-container {
     @apply mx-auto aspect-square w-[180px] text-white xl:w-[250px] !important;
@@ -337,7 +338,7 @@
     @apply h3 font-bold md:text-center lg:text-left !important;
   }
   .chart-description {
-    @apply subtitle-1 mt-2 w-full text-white/70 md:text-center lg:text-left !important;
+    @apply subtitle-1 mt-2 w-full text-white/70 dark:text-white/80 md:text-center lg:text-left !important;
   }
 
   /* FileUploader */
