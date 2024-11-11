@@ -100,7 +100,7 @@ export default function AuthForm({ type }: { type: FormType }) {
       </Form>
       {/* OTP Verification */}
       {accountId && (
-        <OTPModal email={form.getValues("email")} accountId={accountId} type={type} />
+        <OTPModal fullName={form.getValues('fullName')} email={form.getValues("email")} accountId={accountId} type={type} />
       )}
     </>
   );

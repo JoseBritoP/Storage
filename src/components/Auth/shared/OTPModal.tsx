@@ -25,11 +25,13 @@ import { FormType } from "../form/AuthForm";
 interface OTPModalProps {
   email: string;
   accountId: string;
-  type: FormType
+  type: FormType;
+  fullName?: string;
 }
 
 export function OTPModal({
   email = "test@gmail.com",
+  fullName,
   accountId,
   type
 }: OTPModalProps) {
@@ -46,7 +48,7 @@ export function OTPModal({
       const sessionId = await verifySecret({ accountId, password });
       if (!sessionId) throw new Error("Error getting sessionId ");
       router.push("/");
-      const message = type === 'sign-in' ? 'Welcome back' : 'Welcome to StoreIt!'
+      const message = type === 'sign-in' ? 'Welcome back!' : fullName && `Welcome to StoreIt ${fullName}!'`
       toast.success(message);
     } catch (error) {
       console.log("Failed to verify OTP", error);
@@ -62,7 +64,6 @@ export function OTPModal({
   };
   return (
     <AlertDialog open={isOpen} onOpenChange={setIsOpen}>
-      {/* <AlertDialogTrigger>Here</AlertDialogTrigger> */}
       <AlertDialogContent className="shad-alert-dialog ">
         <AlertDialogHeader className="relative flex justify-center">
           <AlertDialogTitle className="h2 text-center">
