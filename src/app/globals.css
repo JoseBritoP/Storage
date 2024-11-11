@@ -320,7 +320,7 @@
 
   /* Chart */
   .chart {
-    @apply flex items-center rounded-[20px] bg-brand dark:bg-brand-100 p-5 text-white md:flex-col xl:flex-row !important;
+    @apply flex items-center rounded-[20px] bg-brand-100 p-5 text-white md:flex-col xl:flex-row !important;
   }
   .chart-container {
     @apply mx-auto aspect-square w-[180px] text-white xl:w-[250px] !important;
@@ -338,7 +338,7 @@
     @apply h3 font-bold md:text-center lg:text-left !important;
   }
   .chart-description {
-    @apply subtitle-1 mt-2 w-full text-white/70 dark:text-white/80 md:text-center lg:text-left !important;
+    @apply subtitle-1 mt-2 w-full text-white/90 font-semibold md:text-center lg:text-left !important;
   }
 
   /* FileUploader */
