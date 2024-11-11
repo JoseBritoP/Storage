@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --svg-bg: #F2F4F8; /* Color para el Fondo I en modo claro */
+  --svg-card-bg: #FFF; /* Color para el Fondo II en modo claro */
+}
+
+/* Alternar en modo oscuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --svg-bg: #1A1A1A;
+    --svg-card-bg: #333333;
+  }
+}
+
 @layer base {
   * {
     @apply scroll-smooth;
@@ -216,7 +229,7 @@
     @apply relative mt-6 rounded-[20px] bg-white dark:bg-dark-100 p-5 transition-all hover:scale-105 !important;
   }
   .summary-type-icon {
-    @apply absolute -left-3 top-[-25px] z-10 w-[190px] object-contain dark:bg-dark-200 !important;
+    @apply absolute -left-3 top-[-25px] z-10 w-[190px] object-contain  !important;
   }
   .summary-type-size {
     @apply h4 relative z-20 w-full text-right !important;
