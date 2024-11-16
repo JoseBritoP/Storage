@@ -12,8 +12,8 @@ export default async function RootLayout({
 }) {
   const currentUser = await getCurrentUser();
 
-  if(!currentUser) redirect('/sign-in');
-  
+  if (!currentUser) return redirect("/sign-in");
+
   return (
     <main className="flex h-screen">
       <Sidebar
