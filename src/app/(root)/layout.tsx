@@ -11,8 +11,10 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const currentUser = await getCurrentUser();
-  console.log(currentUser)
-  if(!currentUser) return redirect('/sign-in');
+  console.log(currentUser);
+  setTimeout(() => {
+    if (!currentUser) return redirect("/sign-in");
+  }, 500);
   return (
     <main className="flex h-screen">
       <Sidebar
